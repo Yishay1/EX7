@@ -27,7 +27,8 @@ void TicTacToe::play(Player& x,Player& o)
 		}
 		if(done())
 		{
-			winneri=&x;
+			if(this->numOfPlays==0) winneri=&o;
+			else winneri=&x;
 			isEndFlag=true;
 			break;
 		}
